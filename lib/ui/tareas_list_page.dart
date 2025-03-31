@@ -37,6 +37,10 @@ class ListTareasPage extends StatelessWidget {
                   itemCount: _tc.tareas.length,
                   itemBuilder: (BuildContext context, int index) {
                     return ListTile(
+                      leading: CircleAvatar(
+                          child: Text(
+                        _tc.tareas[index].id.toString(),
+                      )),
                       title: Text(_tc.tareas[index].nombre),
                     );
                   },
